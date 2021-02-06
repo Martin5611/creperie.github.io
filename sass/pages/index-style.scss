@@ -1,0 +1,40 @@
+/* padding main des pages : accueil, section_news, carte */
+.index__main, .news__section, .menu__main, .galette__main, .crepe__main, .nous-trouver__localisation {
+    margin-top: 170px;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+}
+.nous-contacter__main {
+    margin-top: 150px;
+    padding-bottom: 3px;
+}
+/* 3 images du haut de l'accueil */
+.index__main__pictures {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+        /* bordures 3 images du haut accueil */
+.index__main__pictures__element {
+        border: 10px solid ivory;
+}
+/* corps du texte de l'accueil, de news et de nous trouver */
+.index__main__text, .news__section__text, .nous-contacter__main__contenu, .galette__main__contenu, .crepe__main__choix {
+    background-image: url("pictures/sand_background.jpg");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    padding-top: 3px;
+    padding-bottom: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 10px solid ivory;
+}
+/* largeur corps du texte de l'accueil, de news */
+.index__main__text, .news__section__text {
+    width: 750px;
+    text-align: center;
+}

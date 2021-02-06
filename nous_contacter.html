@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- meta qui empeche de zoomer et dezoomer sur mobile -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Menu: Crêperie Chez Vivi &amp; JuJu</title>
+        <meta mame="Crêperie restaurant" content="Crêperie Vivi Juju Rennes">
+    </head>
+    <body class="nous-contacter">
+        <div class="site-container"> <!-- classe qui evite de faire bouger tout le site sur mobile avec le menu deploye -->
+            <div class="site-pusher"> <!-- classe qui pernet de pousser tout le site -->
+                <!-- entete -->
+                <header class="header">
+                    <!-- logo + titre -->
+                    <a href='#' class="header__icon" id="header__icon"></a>
+                    <img class="header__logo" src="pictures/logo_vivi_mini.png" alt="logo__picture"/>
+                    <h1 class="header__title">Crêperie<br>chez Vivi &amp; JuJu</h1>
+                    <!-- menu de navigation -->
+                    <nav class="header__nav">
+                        <a href="index.html" class="header__nav__button">Accueil</a>
+                        <a href="news.html" class="header__nav__button">Quoi de neuf?</a>
+                        <a href="menu.html" class="header__nav__button">Menu</a>
+                        <a href="nous_trouver.html" class="header__nav__button">Nous trouver</a>
+                        <a href="nous_contacter.html" class="header__nav__active">Nous contacter</a>
+                    </nav>
+                </header>
+                <div class="site-content">
+                    <div class="container">
+                        <section class="nous-contacter__main">
+                            <div class="nous-contacter__main__contenu">
+                                <form method="POST" action="contact.php">
+                                    <h2>Nous contacter</h2>
+                                        <div>
+                                            <label for="nom_input">* Nom</label>
+                                            <input type="text" name="nom" id="nom_input" maxlength="15" minlength="4" placeholder="Ex : Dupont" required>
+                                        </div>
+                                        <div>
+                                            <label for="prenom_input">* Prénom</label>
+                                            <input type="text" name="prenom" id="prenom_input" maxlength="15" minlength="4" placeholder="Ex : Jean" required>
+                                        </div>
+                                        <div>
+                                            <label for="email_input">* email</label>
+                                            <input type="email" name="email" id="email_input" placeholder="Ex : contact@email.com" required>
+                                        </div> 
+                                        <div>
+                                            <label for="message_input">* message</label> <br>
+                                            <textarea name="message" id="message_input" cols="100" rows="10" placeholder="Votre message"></textarea> <br>
+                                        </div>
+                                        <div>
+                                            <p>Les champs précédés d'une astérisque sont obligatoires.</p>
+                                        </div>
+                                            <button type="submit">Envoyer</button>     
+                                </form>
+                            </div>
+                        </section>
+                        <footer>
+                            <!-- adresse + reseau reseau_sociaux -->
+                            <div class="footer__link">
+                                <div class="footer__link__social">
+                                    <a href="https://www.facebook.com/" target="_blank"><img src="pictures/facebook_logo.png" class="footer__link__facebook" alt="facebook"></a>
+                                    <a href="https://www.instagram.com/" target="_blank"><img src="pictures/insta_logo.png" class="footer__link__instagram" alt="insta_logo"></a>
+                                </div>
+                                <div class="adresse"><p>123 Rue de la demonstration <br> 35000 Rennes <br> France</p></div>
+                                <!-- banniere horaire -->
+                                <div class="footer__schedule"><p>Ouvert du Mardi au Samedi <br> 12h00-14h00 <br> 19h00- 22h00</p></div>
+                            </div>
+                            <!-- signature -->
+                            <div class="footer__filigram">
+                                <p>Créé par <a href="https://github.com/Martin561" class="footer__filigram__signature">Martin</a></p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <div class="site-cache" id="site-cache"></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

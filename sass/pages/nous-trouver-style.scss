@@ -1,0 +1,17 @@
+/* mise en page onglet mous trouver */
+.nous-trouver__localisation__banniere {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 900px;
+    background: ivory;
+}
+/* picture loc */
+.nous-trouver__localisation__picture {
+    height: 400px;
+    width: 900px;
+    border: 10px solid rgba(242, 216, 145, 255);
+    margin: 20px;
+}

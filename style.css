@@ -1,0 +1,510 @@
+/* fonts title */
+@font-face {
+  font-family: "carringtonregular";
+  src: url("fonts/Carrington-webfont.eot");
+  src: url("fonts/Carrington-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Carrington-webfont.woff2") format("woff2"), url("fonts/Carrington-webfont.woff") format("woff"), url("fonts/Carrington-webfont.ttf") format("truetype"), url("fonts/Carrington-webfont.svg#carringtonregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* fonts boutons navigation */
+@font-face {
+  font-family: "caveatregular";
+  src: url("fonts/caveat-regular-webfont.eot");
+  src: url("fonts/caveat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/caveat-regular-webfont.woff2") format("woff2"), url("fonts/caveat-regular-webfont.woff") format("woff"), url("fonts/caveat-regular-webfont.ttf") format("truetype"), url("fonts/caveat-regular-webfont.svg#caveatregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.header__logo__title, .header__nav__button, .header__nav__active {
+  font-family: "carringtonregular", "Comic Sans MS", Verdana, Arial, sans-serif;
+}
+
+/* fonts section  */
+.section {
+  font-family: "Comic Sans MS", Verdana, Arial, sans-serif;
+  font-size: 1.5em;
+}
+
+/* fonts adresse*/
+.address {
+  font-family: "Comic Sans MS", Verdana, Arial, sans-serif;
+  font-size: 1em;
+}
+
+.formule__main {
+  font-family: "Comic Sans MS", Verdana, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+/* background pictures set */
+.index, .news, .menu, .formule, .crepe__main, .galette__main, .nous-contacter, .nous-trouver {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* suppression bordure page html */
+* {
+  box-sizing: border-box;
+}
+
+/* margin_body_set_to_0 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* padding main des pages : accueil, section_news, carte OK */
+.index__main, .news__section, .menu__main, .galette__main, .crepe__main, .nous-trouver__localisation {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.index__main, .news__section, .menu__main, .nous-trouver__localisation, .nous-contacter__main, .formule, .crepe__main, .galette__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* padding main des pages : accueil, section_news, carte */
+.index__main, .news__section, .menu__main, .galette__main, .crepe__main, .nous-trouver__localisation {
+  margin-top: 130px;
+  padding-bottom: 3px;
+}
+
+.nous-contacter__main {
+  margin-top: 150px;
+  padding-bottom: 3px;
+}
+
+/* style header */
+.header {
+  position: fixed;
+  background-color: #f2d891;
+  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+/* menu header */
+.header a {
+  margin: 15px;
+  padding: 5px 10px;
+}
+
+.header__nav {
+  float: left;
+  margin-top: 30px;
+}
+
+/* footer */
+/* alignement footer sur main au bas de la page  */
+footer {
+  padding-top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* alignement adresse et reseau sociaux */
+.footer__link {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f2d891;
+}
+
+.footer__link__facebook, .footer__link__instagram {
+  padding: 16px 5px;
+}
+
+/* filigram */
+.footer__filigram {
+  position: relative;
+  color: white;
+  background: black;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+.footer__filigram p {
+  height: 20px;
+  padding: 4px;
+  margin: 0;
+}
+
+/* signature */
+.footer__filigram__signature {
+  color: ivory;
+}
+
+.footer__filigram__signature:hover {
+  color: green;
+}
+
+@media only screen and (max-width: 365px) {
+  .header__title {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .nous-trouver__localisation {
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 1085px) {
+  .nous-trouver__localisation__banniere, .nous-trouver__localisation__picture {
+    width: 60%;
+  }
+
+  .menu__main__contenu__picture {
+    flex-direction: column;
+  }
+
+  .menu__main__contenu__picture__magnet {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-pusher, .site-container {
+    height: 100%;
+  }
+
+  .site-container {
+    overflow: hidden;
+  }
+
+  .site-pusher {
+    height: 100%;
+    transition-duration: 0.3s;
+    transform: translateX(0);
+  }
+
+  .site-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* Inertie sur iOS */
+  }
+
+  .header {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+  }
+
+  .header__logo {
+    margin: 0;
+  }
+
+  .header__icon {
+    position: relative;
+    z-index: 1;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 66px;
+    cursor: pointer;
+  }
+  .header__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.5rem;
+    height: 0;
+    top: 12px;
+    left: 15px;
+    -webkit-box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+    -moz-box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+    box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+  }
+
+  .header__nav {
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #efd07a;
+    width: 250px;
+    transform: translateX(-250px);
+    transition-duration: 0.3s;
+  }
+  .header__nav a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #f5e0a8;
+  }
+
+  .width--sidebar .site-pusher {
+    transform: translateX(250px);
+  }
+  .width--sidebar .site-cache {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+/* responsive background */
+/* background index */
+@media only screen and (max-width: 980px) {
+  .index {
+    background-image: url("pictures/campagne800px.jpg");
+  }
+
+  .news {
+    background-image: url("pictures/background_wheat_field800px.jpg");
+  }
+
+  .menu, .formule, .crepe__main, .galette__main, .nous-contacter, .nous-trouver {
+    background-image: url("pictures/restaurant800px.jpg");
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1085px) {
+  .index {
+    background-image: url("pictures/campagne1024px.jpg");
+  }
+
+  .news {
+    background-image: url("pictures/background_wheat_field1024px.jpg");
+  }
+
+  .menu, .formule, .crepe__main, .galette__main, .nous-contacter, .nous-trouver {
+    background-image: url("pictures/restaurant1024px.jpg");
+  }
+}
+@media only screen and (min-width: 1085px) and (max-width: 1600px) {
+  .index {
+    background-image: url("pictures/campagne1600px.jpg");
+  }
+
+  .news {
+    background-image: url("pictures/background_wheat_field1600px.jpg");
+  }
+
+  .menu, .formule, .crepe__main, .galette__main, .nous-contacter, .nous-trouver {
+    background-image: url("pictures/restaurant1600px.jpg");
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .index {
+    background-image: url("pictures/campagne3200px.jpg");
+  }
+
+  .news {
+    background-image: url("pictures/background_wheat_field3200px.jpg");
+  }
+
+  .menu, .formule, .crepe__main, .galette__main, .nous-contacter, .nous-trouver {
+    background-image: url("pictures/restaurant1900px.jpg");
+  }
+}
+.header__logo, .header__title {
+  float: left;
+}
+
+/* logo_vivi_mini */
+.header__logo {
+  height: 68px;
+  width: 80px;
+  margin: 10px 10px;
+}
+
+/* titre */
+.header__title {
+  top: 0;
+  margin: 20px 10px;
+  font-size: 18px;
+}
+
+/* Boutons menu */
+.header__nav__button, .header__nav__active {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "caveatregular", "Comic Sans MS", Verdana, Arial, sans-serif;
+  padding: 10px;
+  width: 200px;
+  white-space: nowrap;
+}
+
+/* ecriture en noir par default des bouttons de navigation non-actifs */
+.header__nav__button {
+  color: black;
+  border-radius: 3px;
+}
+
+/* survol bouton du menu navigation non-actifs en marron */
+.header__nav__button:hover {
+  background-color: #c49615;
+}
+
+/* ecriture en couleur ivoire des boutons des pages actives */
+.header__nav__active {
+  color: grey;
+}
+
+/* padding main des pages : accueil, section_news, carte */
+.index__main, .news__section, .menu__main, .galette__main, .crepe__main, .nous-trouver__localisation {
+  margin-top: 170px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+}
+
+.nous-contacter__main {
+  margin-top: 150px;
+  padding-bottom: 3px;
+}
+
+/* 3 images du haut de l'accueil */
+.index__main__pictures {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* bordures 3 images du haut accueil */
+.index__main__pictures__element {
+  border: 10px solid ivory;
+}
+
+/* corps du texte de l'accueil, de news et de nous trouver */
+.index__main__text, .news__section__text, .nous-contacter__main__contenu, .galette__main__contenu, .crepe__main__choix {
+  background-image: url("pictures/sand_background.jpg");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+  padding-top: 3px;
+  padding-bottom: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 10px solid ivory;
+}
+
+/* largeur corps du texte de l'accueil, de news */
+.index__main__text, .news__section__text {
+  width: 750px;
+  text-align: center;
+}
+
+/* postionnement titre et l'ensemble choix menu OK */
+.menu__main__contenu {
+  top: 0;
+  width: 900px;
+  padding: 5px 3px;
+  text-align: center;
+}
+
+/* positionnement des 3 magnets des choix du menu OK */
+.menu__main__contenu__picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* magnets des choix du menu OK */
+.menu__main__contenu__picture__magnet {
+  justify-content: center;
+  background: ivory;
+  border: 10px solid ivory;
+  border-radius: 3px;
+  margin: 10px;
+  height: 234px;
+}
+
+.menu__main__contenu__picture__magnet__bouton {
+  color: black;
+  background: ivory;
+  text-decoration: none;
+  height: 27px;
+}
+
+.formule__main h2 {
+  float: left;
+}
+
+.formule__main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 140px;
+}
+
+.formule__main__midi, .formule__main__spe {
+  background-image: url("pictures/sand_background.jpg");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding-bottom: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 10px solid ivory;
+  margin-left: 100px;
+}
+
+/* mise en page onglet mous trouver */
+.nous-trouver__localisation__banniere {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 900px;
+  background: ivory;
+}
+
+/* picture loc */
+.nous-trouver__localisation__picture {
+  height: 400px;
+  width: 900px;
+  border: 10px solid #f2d891;
+  margin: 20px;
+}
+
+/* cadre contact de la page : nous trouver */
+.nous-contacter__main {
+  margin-top: 190px;
+}
+
+.nous-contacter__main__contenu h2 {
+  text-align: center;
+}
+
+.nous-contacter__main__contenu textarea {
+  margin: 40px;
+}
+
+.nous-contacter__main__contenu label, .nous-contacter__main__contenu input, .nous-contacter__main__contenu p, .nous-contacter__main__contenu button {
+  margin-left: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,144 @@
+$very-small-mobile: 365px!default;
+$mobile: 980px!default;
+$desktop: 1085px!default;
+$large: 1600px!default;
+
+$very-small-mobile-down: "only screen and (max-width: #{$very-small-mobile})";
+
+$mobile-up: "only screen and (min-width: #{$mobile})";
+$mobile-down: "only screen and (max-width: #{$mobile})";
+
+$desktop-up: "only screen and (min-width: #{$desktop})";
+$desktop-down: "only screen and (max-width: #{$desktop})";
+
+$large-up: "only screen and (min-width: #{$large})";
+$large-down: "only screen and (max-width: #{$large})";
+
+// Disparition du titre sur mobile en dessous de 345px
+@media #{$very-small-mobile-down} {
+    .header__title { display: none; }
+}
+
+@media #{$large-up} {
+    .nous-trouver__localisation { margin-top: 400px; }
+}
+
+// @media #{$desktop-down} {
+//     .nous-trouver__localisation__banniere,.nous-trouver__localisation__picture {
+//         width: 60%;
+//     }
+//     .menu__main__contenu__picture {
+//         flex-direction: column;
+//     }
+//     .menu__main__contenu__picture__magnet {
+//         width: 350px;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+// }
+
+$menu-width:250px!default;
+@media #{$desktop-down} {
+    .nous-trouver__localisation__banniere,.nous-trouver__localisation__picture {
+        width: 60%;
+    }
+    .menu__main__contenu__picture {
+        flex-direction: column;
+    }
+    .menu__main__contenu__picture__magnet {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // force l'aparisiton des contenu et menu
+    .site-pusher, .site-container { height: 100%; } 
+    // classe qui evite de faire bouger tout le site sur mobile avec le menu deploy
+    .site-container {overflow: hidden; }
+
+    .site-pusher {
+        height: 100%; // regle le probleme du site pusher qui ne prend pas la hauteur a cause du header fixe sur mobile
+        transition-duration: 0.3s;
+        transform: translateX(0);
+    }
+    // overflow-Y et le site content etendu pour avoir le header fixe sur mobile
+    .site-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* Inertie sur iOS */
+    }
+    // Libere le menu qui etait en position fixed hors mobile = apparition du menu a gauche
+    .header{
+        // position: static;
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
+    }
+    .header__logo { margin: 0; }
+
+    .header__icon {
+        position: relative;
+        z-index: 1;
+        display: block;
+        float: left;
+        width: 50px;
+        height: 66px;
+        // background-color: rgba(#FFF, 0.5); //filtre blanc opaque pour centrer icone et logo
+
+        cursor: pointer;    //affiche main lors du survol de la souris
+
+        // creation icone hamburger en css avec alternance espace vide et bande blanche
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 0;
+            top: 12px;
+            left: 15px;
+            @include box-shadow(0 10px 0 1px rgb(0, 0, 0), 0 16px 0 1px rgb(0, 0, 0), 0 22px 0 1px rgb(0, 0, 0));
+        }
+    }
+
+    .header__nav{
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        background-color: darken($primary, 5);
+
+        width: $menu-width;
+        // Transformation qui masque vers la gauche le menu
+        transform: translateX($menu-width * -1);
+        transition-duration: 0.3s;
+        a {
+            display: block;
+            height: 40px;
+            
+            text-align: center;
+            line-height: 30px;
+
+            border-bottom: 1px solid lighten($primary, 5);
+        }
+    }
+
+    .width--sidebar {
+        .site-pusher{ transform: translateX($menu-width); }
+        .site-cache { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0, 0.6);
+        }
+    }
+}

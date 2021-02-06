@@ -1,0 +1,28 @@
+/* postionnement titre et l'ensemble choix menu OK */
+.menu__main__contenu {
+    top: 0;
+    width: 900px;
+    padding: 5px 3px;
+    text-align: center;
+}
+/* positionnement des 3 magnets des choix du menu OK */
+.menu__main__contenu__picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+                /* magnets des choix du menu OK */
+.menu__main__contenu__picture__magnet {
+    justify-content: center;
+    background: ivory;
+    border: 10px solid ivory;
+    border-radius: 3px;
+    margin: 10px;
+    height: 234px;
+}
+.menu__main__contenu__picture__magnet__bouton {
+    color: black;
+    background: ivory;
+    text-decoration: none;
+    height: 27px;
+}

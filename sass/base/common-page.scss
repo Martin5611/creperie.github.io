@@ -1,0 +1,20 @@
+/* suppression bordure page html */
+* {
+    box-sizing: border-box;
+}
+/* margin_body_set_to_0 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* padding main des pages : accueil, section_news, carte OK */
+.index__main, .news__section, .menu__main, .galette__main, .crepe__main, .nous-trouver__localisation {
+    margin:0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}

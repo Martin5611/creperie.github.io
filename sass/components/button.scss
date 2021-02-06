@@ -1,0 +1,24 @@
+/* Boutons menu */
+.header__nav__button, .header__nav__active {
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: 'caveatregular', 'Comic Sans MS', Verdana, Arial, sans-serif;
+        padding: 10px;
+        width: 200px;
+        white-space: nowrap;
+}
+/* ecriture en noir par default des bouttons de navigation non-actifs */
+.header__nav__button {
+ color: black;
+ border-radius: 3px;
+}
+/* survol bouton du menu navigation non-actifs en marron */
+.header__nav__button:hover {
+        background-color: $secondary;
+}
+/* ecriture en couleur ivoire des boutons des pages actives */
+.header__nav__active {
+        color: grey;
+}

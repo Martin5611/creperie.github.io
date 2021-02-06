@@ -1,0 +1,15 @@
+/* cadre contact de la page : nous trouver */
+.nous-contacter__main {
+    margin-top: 190px;
+} 
+.nous-contacter__main__contenu h2 {
+    text-align: center;
+}
+.nous-contacter__main__contenu textarea {
+    margin: 40px;
+}
+.nous-contacter__main__contenu {
+    label, input, p, button {
+        margin-left: 100px;
+    }
+}

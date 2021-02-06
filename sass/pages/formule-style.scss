@@ -1,0 +1,14 @@
+.formule__main h2 {
+    float: left;
+}
+.formule__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+.formule__main__midi, .formule__main__spe {
+    @include sand-box;
+    margin-left: 100px;
+}
